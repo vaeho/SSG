@@ -5,7 +5,7 @@ def text_node_to_html_node(text_node):
     if text_node.text_type == "text":
         return LeafNode(text_node.text)
     elif text_node.text_type == "bold":
-        return LeafNode(text_node.text, "b") # LeafNode(text_node.text, "b", {"href" : text_node.url}) if text_node.url else 
+        return LeafNode(text_node.text, "b")
     elif text_node.text_type == "italic":
         return LeafNode(text_node.text, "i")
     elif text_node.text_type == "link":
@@ -20,7 +20,7 @@ def text_node_to_html_node(text_node):
 def main():
     text_node = TextNode("test text", "test type", "test url")
     print(text_node)
-    
+
     
 
 main()
