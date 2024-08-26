@@ -2,7 +2,8 @@ import unittest
 
 from textnode import TextNode
 from htmlnode import *
-from main import text_node_to_html_node
+from textnode import text_node_to_html_node
+from mdsplitter import split_nodes_delimiter
 
 
 class TestTextNode(unittest.TestCase):
@@ -42,7 +43,8 @@ class TestTextNode(unittest.TestCase):
         
         node = TextNode("This is italic text", "italic")
         self.assertEqual(text_node_to_html_node(node), LeafNode("This is italic text", "i"))
-
+    
+    
 
 if __name__ == "__main__":
     unittest.main()
